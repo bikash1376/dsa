@@ -63,10 +63,41 @@ public class Functions {
 
 
         //Fibonacci series upto n
-        int x = 0, y = 1;
+   /*     int x = 0, y = 1;
         System.out.println("Enter the value of n");
         int n = in.nextInt();
-        fibonacciSeries(x,y,n);
+        fibonacciSeries(x,y,n);*/
+
+        //GCD of two numbers
+     /*   int num1 = 20, num2 = 16;
+        int gcd = gcdOfTwoNumbers(num1, num2);
+        System.out.println(gcd);*/
+
+        //Reverse number/Check palindrome
+        /*int val = 123212;
+
+        int rev = reverseNum(val);
+        System.out.println("Original Number = " +val);
+        System.out.println("Reverse Number = " +rev);*/
+
+
+        //Exponent
+ /*       int base = 3;
+        int index = 4;
+        int result = exponent(base, index);
+        System.out.println(result);*/
+
+
+        //Function to check Prime number
+  /*      int numToCheck = 712;
+        boolean primeOrNot = checkPrime(numToCheck);
+        System.out.println(primeOrNot);*/
+
+        //String Palindrome Check
+   /*     String st = "bob";
+        //boolean stringCheck = stringPalindromeCheck(st);
+        //System.out.println(stringCheck);
+        System.out.println(stringPalindromeCheck(st));*/
     }
 
 
@@ -193,5 +224,58 @@ public static void fibonacciSeries(int x, int y, int n) {
     }
 }
 
+public static int gcdOfTwoNumbers(int num1, int num2) {
+        while (num2 != 0) {
+            int temp = num2;
+            num2 = num1 % num2;
+            num1 = temp;
+        }
+        return num1;
+    }
+
+public static int reverseNum(int val) {
+        int rev = 0;
+        int temp = val;
+        while(val!=0) {
+            int r = val%10;
+            rev = rev*10+r;
+            val = val/10;
+        }
+        if(temp == rev)
+            System.out.println("Palindrome");
+        else
+            System.out.println("Not Palindrome");
+        return rev;
+}
+
+public static int exponent(int base, int index) {
+        int result=1;
+        for(int i = 0; i<index;i++) {
+            result*= base;
+        }
+        return result;
+}
+
+public static boolean checkPrime(int numToCheck) {
+    if (numToCheck <= 1) {
+        return false;
+    }
+        for(int i= 2;i<=Math.sqrt(numToCheck);i++) {
+            if(numToCheck%i==0)
+                return false;
+        }
+    return true;
+}
+
+public static boolean stringPalindromeCheck(String str) {
+        String revStr="";
+        for(int i=str.length()-1;i>=0;i--) {
+            revStr = revStr + str.charAt(i);
+        }
+         if(str.toLowerCase().equals(revStr.toLowerCase()))
+             return true;
+         else
+             return false;
+}
 
 }
