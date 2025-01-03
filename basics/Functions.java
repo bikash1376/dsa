@@ -44,6 +44,29 @@ public class Functions {
         //Finding largest element
         /*int[] data = {1,2,3,4,5};
         largestWithoutFunctions(data);*/
+
+        //ASCII to char and vice versa
+     /*   char ch = 'a';
+        int z = 67;
+        charToAscii(ch,z);*/
+
+        //Swap function
+   /*     int m = 29;
+        int n = 13;
+        swapFunc(m,n);*/
+
+
+        //Count digits function
+    /*    long number = 999999999;
+        int count = countFunc(number);
+        System.out.println(count);*/
+
+
+        //Fibonacci series upto n
+        int x = 0, y = 1;
+        System.out.println("Enter the value of n");
+        int n = in.nextInt();
+        fibonacciSeries(x,y,n);
     }
 
 
@@ -135,6 +158,40 @@ public class Functions {
         System.out.println("Sorted array: " + Arrays.toString(data));
     }
 
+public static void charToAscii(char chr, int z) {
+        int ascii = chr;
+        int castAscii = (int)chr;  //Alternative method
+    char ch = (char)z;
+    System.out.println(ascii);
+    System.out.println(castAscii);
+    System.out.println(ch);
+}
+
+public static void swapFunc(int m, int n) {
+        int temp = m;
+        m =n;
+        n = temp;
+    System.out.println("m:"+m+" n:"+n);
+}
+
+public static int countFunc(long number) {
+        int count =0;
+        while(number!=0) {
+            number=number/10;
+            ++count;
+        }
+        return count;
+}
+
+public static void fibonacciSeries(int x, int y, int n) {
+    System.out.print(x+ " " +y);
+    for(int i=2;i<n;i++) {
+        int z = x+y;
+        System.out.print(" "+z+" ");
+        x = y;
+        y = z;
+    }
+}
 
 
 }
