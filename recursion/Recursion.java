@@ -32,7 +32,6 @@ public class Recursion {
         }
     }
 
-
     public static int printingReverse(int n) {
         if(n<=1)
             return 1;
@@ -55,7 +54,6 @@ public class Recursion {
         else
             return n* fact(n-1);
     }
-
 
     public static int exponent(int x, int n) {
         if(n==0)
