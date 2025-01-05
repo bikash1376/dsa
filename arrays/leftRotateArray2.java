@@ -1,0 +1,2 @@
+public class leftRotateArray2 {
+}
