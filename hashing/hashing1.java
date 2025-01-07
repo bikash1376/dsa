@@ -4,7 +4,10 @@ public class hashing1 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int[] arr = {1, 2, 2, 3, 1, 4};
-        System.out.println(frequencyCounting(arr, in));
+        //System.out.println(frequencyCounting(arr, in));
+
+        String str = "bikashsahu";
+        charHashing(str);
     }
 
     public static int frequencyCounting(int[] arr, Scanner in) {
@@ -25,5 +28,22 @@ public class hashing1 {
             }
         }
         return 0;
+    }
+
+    public static void charHashing(String str) {
+        int[] charCount = new int[128];
+
+        for(char c:str.toCharArray()) {
+            charCount[c]++;
+        }
+        for(char c=0;c<charCount.length;c++) {
+            if(charCount[c]>0) {
+                System.out.println(c+ ":" +charCount[c]);
+            }
+        }
+    }
+
+    public static void charHashingHashMap(String str) {
+        HashMap<Character, Integer> charCount = new HashMap
     }
 }
