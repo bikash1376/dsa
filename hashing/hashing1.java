@@ -7,7 +7,8 @@ public class hashing1 {
         //System.out.println(frequencyCounting(arr, in));
 
         String str = "bikashsahu";
-        charHashing(str);
+        //charHashing(str);
+        //charHashingHashMap(str);
     }
 
     public static int frequencyCounting(int[] arr, Scanner in) {
@@ -44,6 +45,17 @@ public class hashing1 {
     }
 
     public static void charHashingHashMap(String str) {
-        HashMap<Character, Integer> charCount = new HashMap
+        HashMap<Character, Integer> charCount = new HashMap<>();
+        for(char c:str.toCharArray()) {
+            if(charCount.containsKey(c)) {
+                charCount.put(c, charCount.get(c)+1);
+            }
+            else {
+                charCount.put(c,1);
+            }
+        }
+        for(char c: charCount.keySet()) {
+            System.out.println(c+ ":" + charCount.get(c));
+        }
     }
 }
